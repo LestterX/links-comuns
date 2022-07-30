@@ -1,0 +1,23 @@
+{% extends 'base-main.html' %}
+{% block content %}
+    {% for site in sites%}
+        <div class="box">
+            <h3>{{ site['nome'] }}</h3>
+            <a href="{{ site['link'] }}" target="_blank">
+                <div class="bnt"></div></a>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block login %}
+        <div id="formLogin">
+            <div id="varLogin">
+                <form action="/login" method="POST" id="login">
+                    <p><input placeholder="Nome de Usuário" type="text" name="usuario" id="usuario"></p>
+                    <p><input placeholder="Senha" type="password" name="senha" id="senha"></p>
+                    <input type="submit" value="Entrar">
+                    <div id="bncCLogin"><span class="txt">Cancelar</span></div>
+                </form>
+            </div>
+        </div>
+{% endblock %}

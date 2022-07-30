@@ -1,0 +1,416 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+#contador{
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50%;
+    padding: 5px;
+}
+#contador:hover{
+    transform: scale(1.1);
+    cursor: none;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: azure;
+}
+a:link, a:visited, a:active{
+    text-decoration: none;
+    color: #000;
+}
+#baixar{
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.2em;
+    width: 100%;
+    height: 30px;
+}
+#baixar:hover{
+    background-color: green;
+    font-weight: 900;
+}
+#formAdicionar, #formRemover{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(128,128,128,0.5);
+}
+#bntCAdicionar, #bntCRemover{
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 300px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000;
+    border-radius: 30px;
+}
+#bntCAdicionar{
+    background-color: green;
+}
+#bntCRemover{
+    background-color: red;
+}
+#bntCAdicionar:hover, #bntCRemover:hover{
+    transform: scale(1.2);
+}
+#formEd, #formEdRem{
+    position: absolute;
+    border: #000;
+    background-color: #fff;
+    padding: 50px;
+    margin-top: 100px;
+    color: #000;
+    border-radius: 20px;
+}
+#formEd{
+    border: 3px solid green;
+}
+#formEdRem{
+    border: 3px solid red;
+}
+#formTit{
+    text-align: center;
+    font-size: 0.8;
+    font-weight: 500;
+}
+#formEd input, #formEdRem input{
+    margin-top: 15px;
+}
+#formEd input[type="text"], #formEdRem input[type="text"]{
+    height: 30px;
+    width: 200px;
+}
+#formEd input[type="submit"], #formEdRem input[type="submit"]{
+    font-size: 1.2em;
+    margin-left: 140px;
+}
+#navegacao li{
+    list-style: none;
+    display: inline;
+    color: #fff;
+    font-weight: 900;
+    font-size: 0.8em;
+    background-color: #000;
+    padding: 5px;
+    border-radius: 10px;
+}
+#logout{
+    display: inline;
+    background-color: #000;
+    padding: 5px;
+    border-radius: 10px;
+}
+#logout-in{
+    color: #fff;
+    background-color: #000;
+    font-weight: 900;
+    font-size: 0.8em;
+}
+#navegacao li:hover, #logout:hover{
+    color: #ccc;
+    border-bottom: 3px solid #fff;
+    cursor: pointer;
+}
+#logout-in:hover{
+    cursor: pointer;
+}
+#navegacao ul{
+    flex: 2;
+    padding: 5px;
+    visibility: visible;
+}
+nav{
+    /* border: red 1px solid; */
+    height: 60px;
+    width: 100vw;
+    background-color: #000;
+}
+#navegacao{
+    /* border: red 1px solid; */
+    border-radius: 15px;
+    border: solid 5px #000;
+    width: 800px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: orangered; /**aaaaaaaaaaaaaa**/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+#barraDePesquisa{
+    flex: 1;
+    padding-top: 15px;
+    width: 300px;
+}
+#searchbar{
+    float: right;
+    width: 250px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+/** CAIXAS
+**/
+div#limit{
+    width: 100vw;
+    min-height: 550px;
+}
+div#container{
+    /* border: red 1px solid; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 800px;
+    margin: 0 auto;
+}
+div.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    background-color: orange; /**aaaaaaaaaaaaaa**/
+    width: 155px;
+    height: 65px;
+    margin: 20px;
+    position: inherit;
+}
+div.bnt{
+    border-radius: 10px;
+    background-color: #fff;
+    width: 130px;
+    height: 30px;
+}
+div.bnt:hover{
+    background-color: lightGreen;
+}
+.box > h3{
+    color: #000;
+    font-size: 1em;
+    font-weight: 900;
+}
+
+
+/** FOOTER
+**/
+#cont{
+    width: 100vw;
+    height: 215px;
+    background-color: #000c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#bx{
+    height: 200px;
+    width: 800px;
+    background-color: #000;
+    border-radius: 15px;
+    text-align: center;
+}
+.slogan{
+    color: #fff;
+    font-size: 1.2em;
+    margin: 5px;
+}
+footer #aut{
+    color: #fff;
+}
+#auin{
+    width: 95%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#author{
+    color: #fff;
+    width: 45%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#inc-loc{
+    color: #fff;
+    border-left: 3px #fff solid;
+    width: 45%;
+    height: 95%;
+    overflow: hidden;
+}
+#inc-loc:hover{
+    overflow: scroll;
+}
+figure{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 1px orangered solid; /**aaaaaaaaaaaaaa**/
+    border-bottom: 1px orangered solid; /**aaaaaaaaaaaaaa**/
+}
+#perfil{
+    width: 70px;
+    height: 90px;
+    background: url(media/perfil-90x70.png) no-repeat center center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+figcaption{
+    margin-bottom: 5px;
+    font-size: 1.1em;    
+}
+#bio{
+    margin-left: 30px;
+}
+#bio > p{
+    margin: 0;
+}
+#bio > ul{
+    list-style: square;
+    text-align: left;
+    font-size: 1.3em;
+}
+
+/** LOGIN
+**/
+#formLogin{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: grey;
+    height: 100vh;
+    width: 100vw;
+}
+#varLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 300px;
+    border: 5px solid orange;
+}
+#login input[type="text"], #login input[type="password"]{
+    font-size: 1.5em;
+    border-radius: 15px;
+    height: 40px;
+    width: 250px;
+    margin-top: 10px;
+}
+#login input[type="submit"]{
+    font-size: 1.1em;
+    height: 30px;
+    width: 80px;
+    margin-top: 10px;
+    background-color: green;
+    cursor: pointer;
+}
+#bncCLogin{
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 30px;
+    width: 80px;
+    background-color: red;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+#bncCLogin:hover{
+    cursor: pointer;
+}
+
+/**MEDIA QUERIES
+**/
+
+@media screen and (max-width: 480px){ /** PARA FUNCIONAR EM CELULAR **/
+    nav{
+        height: 100px;
+        width: 100vw;
+    }
+    #navegacao{
+        height: 100px;
+        width: 100vw;
+        flex-direction: column;
+    }
+    div#limit{
+        min-height: 100vh;
+        width: 100vw;
+    }
+    div#container{
+        width: 100vw;
+    }
+    div.box{
+        border-radius: 8px;
+        width: 150px;
+        margin: 15px;
+    }
+    .box > h3{
+        font-size: 0.9em;
+    }
+    #navegacao ul{
+        flex: 1;
+        padding: 0;
+    }
+    #barraDePesquisa{
+        flex: 1;
+        padding-top: 0;
+        width: 100%;
+    }
+    #searchbar{
+        width: 100%;
+        height: 45px;
+        border: none;
+        font-size: 1.5em;
+    }
+    #bx{
+        position: relative;
+        height: 100%;
+        width: 95vw;
+        border-radius: 10px;
+    }
+    
+    #perfil{
+        margin-bottom: 5px;
+        margin-top: 1px;
+    }
+    .slogan{
+        font-size: 1em;
+        margin: 5px;
+    }
+    figcaption{
+        margin-bottom: 5px;
+        font-size: 1em;    
+    }
+    #bio > ul{
+        font-size: 1em;
+    }
+    #inc-loc{
+        margin-left: 20px;
+        padding-left: 15px;
+        height: 90%;
+        width: 40%;
+    }
+    #auin{
+        margin-left: 15px;
+    }
+}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for site in sites%}
+        <div class="box">
+            <h3>{{ site['nome'] }}</h3>
+            <a href="{{ site['link'] }}" target="_blank">
+                <div class="bnt"></div></a>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block formAdd %}
+    <div id="formAdicionar">
+        <div id="bntCAdicionar"></div>
+        <form action="/adicionar" method="POST" id="formEd">
+            <p id="formTit">ADICIONAR</p>
+            <p><input maxlength="18" placeholder="Nome do Site" type="text" name="nome" id="nome"></p>
+            <p><input placeholder="Link do Site" type="text" name="link" id="link"></p>
+            <p><input type="submit" value="Salvar" id="Salvar"></p>
+        </form>
+    </div>
+{% endblock %}
+{% block formRem %}
+    <div id="formRemover">
+        <div id="bntCRemover"></div>
+        <form action="/remover" method="POST" id="formEdRem">
+            <p id="formTit">REMOVER</p>
+            <p><input maxlength="18" placeholder="Nome do Site" type="text" name="nome" id="nome"></p>
+            <p><input type="submit" value="Excluir" id="Excluir"></p>
+        </form>
+    </div>
+{% endblock %}
